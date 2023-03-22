@@ -1,6 +1,27 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  while (word.length > 1) {
+    if (word[0] !== word[word.length - 1]) {
+      return false;
+    }
+    word = word.slice(1, word.length - 1);
+  }
+  return true;
 }
+
+// function isPalindrome(word) {
+//   // Write your algorithm here
+//   let left = 0;
+//   let right = word.length - 1;
+//   while (left < right) {
+//     if (word[left] !== word[right]) {
+//       return false;
+//     }
+//     left++;
+//     right--;
+//   }
+//   return true;
+// }
 
 /* 
   Add your pseudocode here
